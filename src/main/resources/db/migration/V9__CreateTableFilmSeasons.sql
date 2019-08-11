@@ -1,0 +1,9 @@
+CREATE TABLE film_seasons (
+  id INTEGER NOT NULL GENERATED ALWAYS AS IDENTITY (START WITH 1, INCREMENT BY 1),
+  name VARCHAR(250),
+  description VARCHAR(250),
+  path VARCHAR (250),
+  film_id INTEGER,
+  CONSTRAINT season_key PRIMARY KEY (id),
+  CONSTRAINT film_id_ref4 FOREIGN KEY (film_id) REFERENCES FILMS(id)
+);
