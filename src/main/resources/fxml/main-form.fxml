@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.ListView?>
 <?import javafx.scene.layout.AnchorPane?>
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="ru.rashgild.controller.MainController"
-            prefHeight="400.0" prefWidth="600.0">
 
+
+<AnchorPane prefHeight="800.0" prefWidth="1204.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.rashgild.controller.MainController">
+   <children>
+      <ListView layoutX="14.0" layoutY="15.0" prefHeight="769.0" prefWidth="230.0" />
+      <AnchorPane layoutX="279.0" layoutY="14.0" prefHeight="769.0" prefWidth="905.0" />
+   </children>
 </AnchorPane>

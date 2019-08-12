@@ -33,18 +33,8 @@ public class MainApp extends Application {
 
         MainController controller = (MainController) SpringLoader.loadControllerFxml("/fxml/main-form.fxml");
         Scene scene = new Scene((Parent) controller.getView());
-        //scene.getStylesheets().add((getClass().getResource("/css/mainStyle.css")).toExternalForm());
         stageMain.setScene(scene);
-        //stageMain.getIcons().add(new Image(String.valueOf(ClassLoader.getSystemResource("icon/icon.png"))));
-        //stageMain.resizableProperty().setValue(Boolean.FALSE);
         controller.setStage(stageMain);
-
-     /*   stageMain.setOnCloseRequest(event -> {
-                    ShutdownBaseBean bean = (ShutdownBaseBean) SpringLoader.getBean(ShutdownBaseBean.class);
-                    bean.shutdown();
-                    System.exit(0);
-                }
-        );*/
         stageMain.show();
     }
 
@@ -55,7 +45,7 @@ public class MainApp extends Application {
                      MainApp.class.getClassLoader().getResourceAsStream("application.properties")) {
             Properties property = new Properties();
             property.load(input);
-            host = property.getProperty("jdbc.url") + ";create=true";
+            host = property.getProperty("jdbc.url");
 
         } catch (IOException e) {
             log.error("IOException:", e.getMessage());

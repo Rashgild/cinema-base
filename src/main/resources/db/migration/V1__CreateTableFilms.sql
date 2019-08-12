@@ -1,11 +1,10 @@
 CREATE TABLE films (
-  id INTEGER NOT NULL GENERATED ALWAYS AS IDENTITY (START WITH 1, INCREMENT BY 1),
-  name VARCHAR(250),
-  name_original VARCHAR (250),
-  country VARCHAR (250),
+  id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+  name VARCHAR,
+  name_original VARCHAR,
+  country VARCHAR,
   release DATE,
-  time VARCHAR (250),
+  time VARCHAR,
   tv_series BOOLEAN,
-  photo VARCHAR (250),
-  CONSTRAINT film_key PRIMARY KEY (id)
+  photo VARCHAR
 );

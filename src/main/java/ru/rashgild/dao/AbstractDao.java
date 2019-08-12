@@ -3,7 +3,9 @@ package ru.rashgild.dao;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.transaction.annotation.Transactional;
 
+@Transactional
 abstract class AbstractDao {
 
     @Autowired

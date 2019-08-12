@@ -45,7 +45,7 @@ public class AppConfig {
     public LocalSessionFactoryBean sessionFactory() {
         LocalSessionFactoryBean sessionFactory = new LocalSessionFactoryBean();
         sessionFactory.setDataSource(dataSource());
-        sessionFactory.setPackagesToScan(new String[]{"ru.com.avs.model"});
+        sessionFactory.setPackagesToScan(new String[]{"ru.rashgild.model"});
         sessionFactory.setHibernateProperties(hibernateProperties());
         return sessionFactory;
     }
